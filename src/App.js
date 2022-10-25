@@ -1,8 +1,11 @@
+import React from "react";
+import HomeTodo from "./components/HomeTodo";
+
 
 function App() {
   return (
-    <div className="App bg-gray-400">
-      hello
+    <div>
+      <HomeTodo />
     </div>
   );
 }
