@@ -1,20 +1,32 @@
 import React from 'react'
 
 const NewTodo = () => {
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+    }
+
+
   return (
-      <div className='flex flex-col'>
+      <form className='flex flex-col max-w-lg mx-auto w-full mb-20'>
           <input
-              className='my-8 p-2 outline-none font-normal'
               type="text"
               placeholder=' Type your title'
+              className='my-8 p-2 outline-none font-normal '
           />
           <textarea
-              className='p-2 outline-none font-normal max-w-full max-h-52 min-h-min'
               name="desc"
               id="desc"
-              placeholder='Type your description'>
+              placeholder='Type your description'
+              className='p-2 outline-none font-normal '
+          >
           </textarea>
-      </div>
+
+          <button
+              onClick={handleSubmit}
+              className='px-8 py-2 m-4 text-pink-500 font-semibold text-1xl rounded-full bg-gray-600'>Add</button>
+      </form>
   )
 }
 
