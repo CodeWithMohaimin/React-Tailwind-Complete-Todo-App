@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const NewTodo = () => {
+const NewTodo = (props) => {
 
-    const [todo, setTodo] = useState({ title: "", description: "" });
-    const {title, description} = todo;
+    const [todo, setTodo] = useState({ title: "", desc: "" });
+    const {title, desc} = todo;
 
     // for on change time updating state
     const handleChange = (event) => {
@@ -17,7 +17,8 @@ const NewTodo = () => {
     // for submit 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // console.log(todo);
+        setTodo({ title: "", desc: "" })
+        props.onAddTodo(todo)
     }
     
 
@@ -34,9 +35,9 @@ const NewTodo = () => {
           />
           <textarea
               onChange={handleChange}
-              value={description}
+              value={desc}
               name="desc"
-              id="desc"
+              id='desc'
               placeholder='Type your description'
               className='p-2 outline-none font-normal '
           >

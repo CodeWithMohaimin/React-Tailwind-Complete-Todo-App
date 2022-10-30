@@ -3,7 +3,7 @@ import { VscTrash } from "react-icons/vsc";
 import { VscArrowDown } from "react-icons/vsc";
 
 const Todo = (props) => {
-    const {id, title, description} = props.todo;
+    const {id, title, desc} = props.todo;
   return (
       <article className='p-1 md:p-4  my-4 bg-gray-700 max-w-lg mx-auto rounded-md'>
           <div>
@@ -19,7 +19,7 @@ const Todo = (props) => {
               <div className='rounded-md mt-4'>
                   <p className='text-teal-300 text-left p-2 '>Description <VscArrowDown className='inline'/></p>
 
-                  <p className='text-gray-200 text-left p-2 text-base md:text-lg font-normal tracking-wider'>{description}</p>
+                  <p className='text-gray-200 text-left p-2 text-base md:text-lg font-normal tracking-wider'>{desc}</p>
               </div>
           </div>
 
