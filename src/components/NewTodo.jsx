@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const NewTodo = () => {
 
     const [todo, setTodo] = useState({ title: "", description: "" });
-    const [title, description] = todo;
+    const {title, description} = todo;
 
     // for on change time updating state
     const handleChange = (event) => {
@@ -11,14 +11,13 @@ const NewTodo = () => {
         setTodo((oldTodo) => {
             return { ...oldTodo, [name]: event.target.value }
         });
-        console.log(setTodo)
         
     }
 
     // for submit 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(todo);
+        // console.log(todo);
     }
     
 
