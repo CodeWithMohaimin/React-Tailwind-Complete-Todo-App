@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const NewTodo = (props) => {
 
     const [todo, setTodo] = useState({ title: "", desc: "" });
-    const {title, desc} = todo;
+    let {title, desc} = todo;
 
     // for on change time updating state
     const handleChange = (event) => {
@@ -18,7 +18,9 @@ const NewTodo = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
         setTodo({ title: "", desc: "" })
-        props.onAddTodo(todo)
+        if (title !== "" && desc !== "") {
+            props.onAddTodo(todo)
+        } 
     }
     
 
