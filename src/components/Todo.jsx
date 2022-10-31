@@ -3,6 +3,7 @@ import { VscTrash } from "react-icons/vsc";
 import { VscArrowDown } from "react-icons/vsc";
 
 const Todo = (props) => {
+    
     const {id, title, desc} = props.todo;
   return (
       <article className='p-1 md:p-4  my-4 bg-gray-700 max-w-lg mx-auto rounded-md'>
