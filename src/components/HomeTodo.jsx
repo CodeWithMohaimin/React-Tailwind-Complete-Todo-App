@@ -1,4 +1,5 @@
 import React from "react";
+import NewTodo from "./NewTodo";
 import Todos from "./Todos";
 
 const HomeTodo = () => {
@@ -15,7 +16,8 @@ const HomeTodo = () => {
     },
   ];
   return (
-    <div className="bg-gray-800 min-h-screen pt-10">
+    <div className="bg-gray-800 min-h-screen pt-10 px-4">
+      <NewTodo />
       <Todos data={dummyTodos} />
     </div>
   );
