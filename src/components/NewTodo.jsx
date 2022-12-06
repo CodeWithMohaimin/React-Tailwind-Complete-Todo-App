@@ -20,10 +20,7 @@ const NewTodo = (props) => {
     });
   };
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="text-center text-gray-300  max-w-lg mx-auto mb-4"
-    >
+    <form className="text-center text-gray-300  max-w-lg mx-auto mb-4">
       <div className="flex items-center justify-between mb-2 sm:flex-row flex-col">
         <label htmlFor="title">Title</label>
         <input
@@ -47,9 +44,16 @@ const NewTodo = (props) => {
         ></textarea>
       </div>
       <div className="flex justify-start">
-        <button className="bg-gray-700 hover:bg-gray-900 py-1 px-10 my-10 ring-1 duration-150">
-          Add
-        </button>
+        {!todo.title ? (
+          ""
+        ) : (
+          <button
+            onClick={handleSubmit}
+            className="bg-gray-700 hover:bg-gray-900 py-1 px-10 my-10 ring-1 duration-150"
+          >
+            Add
+          </button>
+        )}
       </div>
     </form>
   );
